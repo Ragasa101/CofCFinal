@@ -44,7 +44,7 @@ group :development, :test do
   gem 'spring'
   
   group :development, :test do
-    gem 'splite3'
+    gem 'sqlite3'
     gem 'pry'
   end
   
