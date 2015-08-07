@@ -13,7 +13,7 @@ class StylesController < ApplicationController
   def create
     @style = Style.new(style_params)
     if @style.save
-      flash[:success] = "Style was created successfully"
+      flash[:success] = "Alignment was created successfully"
       redirect_to recipes_path
     else
       render 'new'

@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
     @recipe.chef = current_user
     
     if @recipe.save
-      flash[:success] = "Your recipe was created successfully!"
+      flash[:success] = "Your Champion was created successfully!"
       redirect_to recipes_path
     else
       render :new
@@ -34,7 +34,7 @@ class RecipesController < ApplicationController
   
   def update
     if @recipe.update(recipe_params)
-      flash[:success] = "Your recipe was updated successfully!"
+      flash[:success] = "Your Champion was updated successfully!"
       redirect_to recipe_path(@recipe)
     else
       render :edit
@@ -47,14 +47,14 @@ class RecipesController < ApplicationController
       flash[:success]="Your selection was successful"
       redirect_to :back
     else
-      flash[:danger] = "You can only like/dislike a recipe once"
+      flash[:danger] = "You can only like/dislike a Champion once"
       redirect_to :back
     end
   end
   
   def destroy
     Recipe.find(params[:id]).destroy
-    flash[:success] = "Recipe Deleted"
+    flash[:success] = "Champion Deleted"
     redirect_to recipes_path
   end
   
@@ -70,7 +70,7 @@ class RecipesController < ApplicationController
     
     def require_same_user
       if current_user != @recipe.chef and !current_user.admin?
-        flash[:danger] = "You can only edit your own recipes"
+        flash[:danger] = "You can only edit your own Champion"
         redirect_to recipe_path
       end
     end

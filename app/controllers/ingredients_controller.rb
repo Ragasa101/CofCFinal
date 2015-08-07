@@ -13,7 +13,7 @@ class IngredientsController < ApplicationController
   def create
     @ingredient = Ingredient.new(ing_params)
     if @ingredient.save
-      flash[:success] = "Ingredient was created successfully"
+      flash[:success] = "Class was created successfully"
       redirect_to recipes_path
     else
       render 'new'
