@@ -1,1 +1,19 @@
+To re-create the functioning App, follow the instructions (get the migrations working correctly):
 
+*In the command line type:
+
+*1) bundle install
+
+*2) rake db:migrate
+
+*3) git remote -v *check to make sure your github is registered, if not type git remote remove
+
+4) heroku install
+
+5) install new AWS credentials
+
+*4) heroku run rake db:migrate 
+
+*5) Sudo apt-get update 
+
+*6) Sudo apt-get install imagemagick --fix-missing
